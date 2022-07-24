@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://clks01.github.io/weblog</id>
+    <title>kevin&apos;s web log</title>
+    <updated>2022-07-24T04:09:42.743Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://clks01.github.io/weblog"/>
+    <link rel="self" href="https://clks01.github.io/weblog/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://clks01.github.io/weblog/images/avatar.png</logo>
+    <icon>https://clks01.github.io/weblog/favicon.ico</icon>
+    <rights>All rights reserved 2022, kevin&apos;s web log</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows11 搭建 C/C++ 编程环境之安装 VSCode]]></title>
+        <id>https://clks01.github.io/weblog/post/windows11-da-jian-cc-bian-cheng-huan-jing-zhi-an-zhuang-vscode/</id>
+        <link href="https://clks01.github.io/weblog/post/windows11-da-jian-cc-bian-cheng-huan-jing-zhi-an-zhuang-vscode/">
+        </link>
+        <updated>2022-07-21T10:40:40.000Z</updated>
+        <content type="html"><![CDATA[<p>打开 VSCode 官网 https://code.visualstudio.com/<br>
+下滑至底部下载 System Installer 版本<br>
+<img src="https://clks01.github.io/weblog/post-images/1658400391425.png" alt="" loading="lazy"><br>
+运行安装程序  同意协议 点击 下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658400855656.png" alt="" loading="lazy"><br>
+如果你不想更改默认安装目录 点击 下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658400936859.png" alt="" loading="lazy"><br>
+如果你不想更改默认在“开始”菜单中快捷方式的名字 点击 下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658401071481.png" alt="" loading="lazy"><br>
+全部打勾 点击 下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658401095563.png" alt="" loading="lazy"><br>
+点击 安装<br>
+<img src="https://clks01.github.io/weblog/post-images/1658401171466.png" alt="" loading="lazy"><br>
+点击 完成<br>
+<img src="https://clks01.github.io/weblog/post-images/1658401187440.png" alt="" loading="lazy"></p>
+<p>第一次运行会提示安装语言包 点击 安装并重启<br>
+<img src="https://clks01.github.io/weblog/post-images/1658401276457.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows11 搭建 C/C++ 编程环境之安装 Clang]]></title>
+        <id>https://clks01.github.io/weblog/post/windows11-da-jian-cc-bian-cheng-huan-jing-zhi-an-zhuang-clang/</id>
+        <link href="https://clks01.github.io/weblog/post/windows11-da-jian-cc-bian-cheng-huan-jing-zhi-an-zhuang-clang/">
+        </link>
+        <updated>2022-07-21T09:47:31.000Z</updated>
+        <content type="html"><![CDATA[<p>打开“MSYS2 MinGW Clang x64”执行 Clang 安装命令</p>
+<pre><code>pacman -S mingw-w64-clang-x86_64-toolchain
+</code></pre>
+<p>回车<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397028546.png" alt="" loading="lazy"><br>
+回车<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397110612.png" alt="" loading="lazy"><br>
+输入 y 回车<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397176925.png" alt="" loading="lazy"><br>
+安装结束查看是否安装成功</p>
+<pre><code>clang --version
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://clks01.github.io/weblog/post-images/1658397211672.png" alt="" loading="lazy"></figure>
+<p>但是现在 Windows11 终端里还找不到 Clang<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397458902.png" alt="" loading="lazy"></p>
+<p>需要把 Clang 添加系统环境变量中去<br>
+快捷键 win + r 弹出运行窗口，输入 sysdm.cpl 点击确定<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397737324.png" alt="" loading="lazy"><br>
+弹出 系统属性 窗口<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397872326.png" alt="" loading="lazy"><br>
+点击 高级 选项卡 点击系统变量<br>
+<img src="https://clks01.github.io/weblog/post-images/1658397931758.png" alt="" loading="lazy"><br>
+弹出 系统变量 窗口<br>
+<img src="https://clks01.github.io/weblog/post-images/1658398021736.png" alt="" loading="lazy"><br>
+选中 系统变量 里的 Path 变量 点击 编辑<br>
+<img src="https://clks01.github.io/weblog/post-images/1658398196986.png" alt="" loading="lazy"><br>
+弹出 编辑环境变量 窗口，点击 新建<br>
+<img src="https://clks01.github.io/weblog/post-images/1658399259084.png" alt="" loading="lazy"><br>
+输入 Clang 文件夹，点击 确定<br>
+<img src="https://clks01.github.io/weblog/post-images/1658399335806.png" alt="" loading="lazy"><br>
+打开 终端 检查是否能正确识别 Clang<br>
+<img src="https://clks01.github.io/weblog/post-images/1658399416717.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows11 搭建 C/C++ 编程环境之安装 MSYS2]]></title>
+        <id>https://clks01.github.io/weblog/post/windows11-de-cc-bian-cheng-huan-jing-da-jian-zhi-an-zhuang-msys2/</id>
+        <link href="https://clks01.github.io/weblog/post/windows11-de-cc-bian-cheng-huan-jing-da-jian-zhi-an-zhuang-msys2/">
+        </link>
+        <updated>2022-07-21T08:30:04.000Z</updated>
+        <content type="html"><![CDATA[<p>打开MSYS2的官网 https://www.msys2.org/<br>
+<img src="https://clks01.github.io/weblog/post-images/1658392607917.png" alt="" loading="lazy"><br>
+下载完成后打开安装程序<br>
+<img src="https://clks01.github.io/weblog/post-images/1658392664035.png" alt="" loading="lazy"><br>
+点击下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658392716708.png" alt="" loading="lazy"><br>
+我不想安装在C盘，所以选择在E盘，然后点击下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658392797008.png" alt="" loading="lazy"><br>
+选择MYSY2在“开始”菜单中文件夹名默认或自定义，然后点击下一步<br>
+<img src="https://clks01.github.io/weblog/post-images/1658393041931.png" alt="" loading="lazy"><br>
+installing<br>
+<img src="https://clks01.github.io/weblog/post-images/1658393076235.png" alt="" loading="lazy"><br>
+安装完成 去掉勾先不要运行<br>
+<img src="https://clks01.github.io/weblog/post-images/1658393134021.png" alt="" loading="lazy"></p>
+<p>还没有结束，MSYS2使用pacman管理packages，但因为某些原因默认源可能速度非常慢或连不上需要切换到国内的镜像源</p>
+<p>打开E:\msys64\etc\pacman.d\文件夹<br>
+<img src="https://clks01.github.io/weblog/post-images/1658393660735.png" alt="" loading="lazy"><br>
+<img src="https://clks01.github.io/weblog/post-images/1658393670725.png" alt="" loading="lazy"><br>
+<img src="https://clks01.github.io/weblog/post-images/1658393676402.png" alt="" loading="lazy"><br>
+在pacman.d文件夹中可以看到许多以mirrorlist开头文件，这些以mirrorlist开头文件就是pacman源配置文件</p>
+<p>随便打开一个pacman源配置文件可以看到默认源与镜像源，其中还有清华大学的源<br>
+<img src="https://clks01.github.io/weblog/post-images/1658395454956.png" alt="" loading="lazy"><br>
+把清华大学的源提升至第一行变成默认源<br>
+<img src="https://clks01.github.io/weblog/post-images/1658395563209.png" alt="" loading="lazy"></p>
+<p>把所有的源配置文件的默认源都改成国内镜像源</p>
+<p>最后一步打开“MSYS2 MSYS”执行更新命令</p>
+<pre><code>pacman -Syu
+</code></pre>
+<p><img src="https://clks01.github.io/weblog/post-images/1658396349404.png" alt="" loading="lazy"><br>
+输入 y 回车<br>
+<img src="https://clks01.github.io/weblog/post-images/1658396365673.png" alt="" loading="lazy"><br>
+输入 y 回车<br>
+<img src="https://clks01.github.io/weblog/post-images/1658396443835.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+</feed>
